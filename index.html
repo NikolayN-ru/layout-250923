@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li class="active">For Business</li>
+        <li>For Customers</li>
+      </ul>
+    </header>
+
+    <div class="cookies">
+      <div class="cookies-content">
+        This website uses cookies to ensure you get the best experience on our
+        website. They also allow us to analyze user behavior in order to
+        constantly improve the website for you.
+      </div>
+      <div class="cookies-button">
+        <button class='btn-cookie btn-cookie-active'>Accept</button>
+        <button class='btn-cookie'>Decline</button>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal">
+      <div class="modal-content">
+        <span class="close" id="closeModalButton">&times;</span>
+        <form id="myForm">
+          <label for="name">Name: <span class="star">*</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter name"
+          />
+          <span class="error-message" id="name-error"
+            >This field is required.</span
+          >
+          <br />
+
+          <label for="email">Email: <span class="star">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Enter email"
+          />
+          <span class="error-message" id="email-error"
+            >This field is required.</span
+          >
+          <br />
+
+          <label for="phone">Phone number: <span class="star">*</span></label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            placeholder="+1 900 000 00 00"
+          />
+          <span class="error-message" id="phone-error"
+            >This field is required.</span
+          >
+          <br />
+
+          <label for="company">Company:</label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            placeholder="Enter company"
+          />
+          <br />
+
+          <label for="website">Website/Store URL:</label>
+          <input
+            type="url"
+            id="website"
+            name="website"
+            placeholder="Enter Website/Store URL"
+          />
+          <br />
+          <span class="error-message" id="form-error"
+            >Please fill in all required fields.</span
+          >
+          <p>
+            By submitting this form you are agreeing to Budss’s
+            <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>
+          </p>
+          <button type="button" id="submitButton" onclick="validateForm()">
+            Contact sales
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="success-modal" class="modal">
+      <div class="modal-content__Ok">
+        <img src="./assets/ok.png" alt="ok" />
+        <span class="success-modal__Ok">Thank you!</span>
+        <p>
+          Thank you, we have received your application and will contact you
+          soon!
+        </p>
+        <button
+          type="button"
+          id="submitButton"
+          class="btn-active-ok"
+          onclick="closeSuccessModal()"
+        >
+          Super!
+        </button>
+      </div>
+    </div>
+
+    <section class="top">
+      <div class="top_header">
+        <img src="./assets/budss.png" alt="budss" />
+        <button class="btn-active">Cantact sales</button>
+        <div class="top_header_mobileMenu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div class="top_content">
+        <div class="top_content__Description">
+          <h1>Everyone is an Influencer</h1>
+          <p>
+            Budss is a payments as a service and WOM engine dedicated to
+            acquisition and retention of customers to your business.
+          </p>
+          <button class="btn-active">Cantact sales</button>
+        </div>
+        <div class="top_content__Image">
+          <img src="./assets/topImage.png" alt="topImage" />
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h2>About Budss</h2>
+      <div class="about_content">
+        <div class="about_content_Description">
+          <div>
+            <p>
+              Payment as a service, powered seamlessly by our network of
+              shoppers
+            </p>
+            <div class="highlighting"></div>
+          </div>
+          <img src="./assets/about1.png" alt="about1" />
+        </div>
+        <div class="about_content_Opportunities">
+          <div class="about_content_Opportunities__Item">
+            <img src="./assets/about-star.png" alt="star" />
+            <h3>Contactless</h3>
+            <p>
+              Budss uses near field communication (NFC) for making contactless
+              payments.
+            </p>
+          </div>
+
+          <div class="about_content_Opportunities__Item">
+            <img src="./assets/about-ram.png" alt="star" />
+            <h3>Increased Buying Power</h3>
+            <p>Returning customers spend up to 3X more.</p>
+          </div>
+
+          <div class="about_content_Opportunities__Item">
+            <img src="./assets/about-zig.png" alt="star" />
+            <h3>Analytics & Insights</h3>
+            <p>
+              Gain a holistic view into your customers’ buying behavior &
+              purchasing patterns.
+            </p>
+          </div>
+
+          <div class="about_content_Opportunities__Item">
+            <img src="./assets/about-blame.png" alt="star" />
+            <h3>Fraud Protection</h3>
+            <p>
+              Budss handles all payments with a fraud prevention algorithm to
+              flag high risk purchases & a user set PIN code to keep payment
+              info secure.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="howWorks">
+      <div class="howWorks_Item">
+        <span class="animated-text">How Budss Works</span>
+        <span class="animated-text line_text">How Budss Works</span>
+      </div>
+      <div class="howWorks_Item">
+        <span class="animated-text line_text">How Budss Works</span>
+        <span class="animated-text">How Budss Works</span>
+      </div>
+      <div class="howWorks_Item">
+        <span class="animated-text">How Budss Works</span>
+        <span class="animated-text line_text">How Budss Works</span>
+      </div>
+      <img src="./assets/phone.png" alt="phone" />
+    </section>
+
+    <section class="percent">
+      <div class="persent_count">
+        <div class="persent_count__Item">
+          <span>15%</span>
+          <p>Increase</p>
+          <p>in Purchase Amount</p>
+        </div>
+
+        <div class="persent_count__Item">
+          <span>30%</span>
+          <p>Growth</p>
+          <p>in Annual Sales</p>
+        </div>
+
+        <div class="persent_count__Item">
+          <span>10%</span>
+          <p>Growth in New</p>
+          <p>Customers</p>
+        </div>
+      </div>
+
+      <div class="percent_title">
+        <h3>Why Budss</h3>
+        <p>We Provide Advanced Payment Solutions To Grow Your Business</p>
+
+        <div class="highlighting"></div>
+      </div>
+      <div class="percent_card">
+        <div class="grid-item one big">
+          <img src="./assets/percent1.png" alt="percent1" />
+          <div class="percent_content">
+            <h4>Turn your customers into loyal influencers</h4>
+            <p>
+              Budss helps businesses harness the exponential power of loyal
+              customers for acquisition and retention.
+            </p>
+          </div>
+        </div>
+        <div class="grid-item twoo">
+          <img src="./assets/percent2.png" alt="percent2" />
+          <div class="percent_content">
+            <h4>Harness the power of buying in bulk</h4>
+            <p>
+              Get at least 2X more sales with Budss Buying Groups. Your customer
+              base will grow exponentially as your customers add their friends &
+              family to your personalized group.
+            </p>
+          </div>
+        </div>
+        <div class="grid-item three">
+          <img src="./assets/percent3.png" alt="percent3" />
+          <div class="percent_content">
+            <h4>Supercharge Loyalty With Instant Cash Back</h4>
+            <p>
+              Budss allows for shoppers to earn immediate cash back at their
+              favorite stores.
+            </p>
+          </div>
+        </div>
+        <div class="grid-item four big">
+          <img src="./assets/percent4.png" alt="percent4" />
+          <div class="percent_content">
+            <h4>Seasoned with AI and Gamification</h4>
+            <p>
+              AI programming creates a personalized customer journey, offering
+              recommendations for their next purchase and optimizing rewards for
+              after purchase.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grow">
+      <div class="grow_contact">
+        <h5>Let Your Business Grow</h5>
+        <button class="btn-active" id="openModalButton">Cantact sales</button>
+      </div>
+      <div class="grow_content">
+        <div class="grow_description">
+          <h6>Your Brand Awareness Maters</h6>
+          <p>
+            Budss is a husle free solution to put your brand on any digital
+            surface including Instagram, Facebook, Twitter and TikTok
+          </p>
+        </div>
+        <div class="grow_link">
+          <div class="grow_lin__Item">
+            <img src="./assets/facebook.png" alt="facebook" />
+          </div>
+          <div class="grow_lin__Item">
+            <img src="./assets/tweeter.png" alt="tweeter" />
+          </div>
+          <div class="grow_lin__Item">
+            <img src="./assets/inst.png" alt="inst" />
+          </div>
+          <div class="grow_lin__Item">
+            <img src="./assets/tik.png" alt="tik" />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="grow_logo">
+          <img src="./assets/woo.png" alt="woo" />
+          <img src="./assets/shop.png" alt="shop" />
+          <img src="./assets/square.png" alt="square" />
+          <img src="./assets/space.png" alt="space" />
+          <img src="./assets/clover.png" alt="clover" />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer_contact">
+        <img src="./assets/budss.png" alt="budss" />
+        <div class="footer_contact__Link">
+          <a href="#">For Business</a>
+          <a href="#">For Customers</a>
+        </div>
+        <div class="footer_contact__App">
+          <button class="btn-active" id="openModalButton">Cantact sales</button>
+          <img src="./assets/appstore.png" alt="appstore" />
+          <img src="./assets/googleplay.png" alt="googleplay" />
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="footer_under">
+        <span>© Copyright 2023, All Rights Reserved by Budss</span>
+        <span
+          ><a href="#">Privacy Policy</a><a href="#">Terms Of Use - Seller</a
+          ><a href="#">Terms of Use - Sellers & Customers</a></span
+        >
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
